@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/outerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <RelativeLayout
+            android:id="@+id/teamALayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/teamAText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Team A"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/teamAScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teamAText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="56sp" />
+
+            <Button
+                android:id="@+id/teamAPlus3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/teamAScore"
+                android:background="@drawable/mybutton"
+                android:onClick="plusThree"
+                android:text="+3 POINTS"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/teamAPlus2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/teamAPlus3"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/mybutton"
+                android:onClick="plusTwo"
+                android:text="+2 POINTS"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/teamAPlus1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/teamAPlus2"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/mybutton"
+                android:onClick="plusOne"
+                android:text="Free Throw"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/verticalSplit"
+            android:layout_width="2dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="24dp"
+            android:background="#f5f5f5" />
+
+        <RelativeLayout
+            android:id="@+id/teamBLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/teamBText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Team B"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/teamBScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teamBText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="56sp" />
+
+            <Button
+                android:id="@+id/teamBPlus3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/teamBScore"
+                android:background="@drawable/mybutton"
+                android:onClick="plusThree"
+                android:text="+3 POINTS"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/teamBPlus2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/teamBPlus3"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/mybutton"
+                android:onClick="plusTwo"
+                android:text="+2 POINTS"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/teamBPlus1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/teamBPlus2"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/mybutton"
+                android:onClick="plusOne"
+                android:text="Free Throw"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rootLayout"
+        android:layout_margin="24dp"
+        android:background="@drawable/mybutton"
+        android:onClick="resetScores"
+        android:text="RESET"
+        android:textSize="17sp" />
+</RelativeLayout>
